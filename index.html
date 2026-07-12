@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingo Nehr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 👈 أيقونة التاب مربوطة بملف اللوجو مباشرة -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- لوجو الشركة الملون باللبني -->
+        <div class="logo-box">
+            <img src="logo.png" alt="PKE Logo">
+        </div>
+
+        <!-- صورة الشخص بأبعادها الطبيعية بدون قص -->
+        <div class="profile-header">
+            <img src="profile.jpeg" alt="Ingo Nehr">
+            <div class="fade-overlay"></div>
+        </div>
+
+        <!-- قسم المعلومات والأيقونات التفاعلية -->
+        <div class="info-section">
+            <h1 class="name">Ingo Nehr</h1>
+            <h2 class="title">Elektro-Installateur Meister</h2>
+            
+            <button class="cta-button" id="contact-btn">Kontakt</button>
+
+            <!-- الأيقونات التفاعلية المربوطة بالجافا سكريبت -->
+            <div class="social-icons" id="social-icons">
+    <a href="https://wa.me/4915222851293" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+4915222851293"><i class="fas fa-phone"></i></a>
+    <a href="mailto:i.nehr@pke-de.com"><i class="fas fa-envelope"></i></a>
+</div>
+        </div>
+    </div>
+
+    <!-- 👈 كود الجافا سكريبت لتشغيل الزرار والأيقونات -->
+    <script>
+        const contactBtn = document.getElementById('contact-btn');
+        const socialIcons = document.getElementById('social-icons');
+
+        contactBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            socialIcons.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            socialIcons.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
