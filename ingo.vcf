@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Ingo;Nehr;;;
+FN:Ingo Nehr
+ORG:PKE
+TITLE:Elektro-Installateur Meister
+TEL;TYPE=CELL:+4915222851293
+EMAIL;TYPE=PREF,INTERNET:i.nehr@pke-de.com
+URL:https://ingonehr.github.io/portfolio
+END:VCARD

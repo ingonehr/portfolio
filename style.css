@@ -137,3 +137,18 @@ body {
     font-size: 24px; /* كبرنا حجم الرموز عشان تبان واضحة جداً */
     color: #ffffff;
 }
+/* أيقونة حفظ جهة الاتصال المميزة */
+.save-vcard {
+    color: #ffffff;
+    font-size: 2.0rem; /* أكبر شوية من الـ 1.7rem بتاعة باقي الأيقونات */
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* لون مميز عند الوقوف عليها (مثلاً لون سماوي هادئ) */
+.save-vcard:hover {
+    color: #008cd2; 
+    transform: translateY(-3px);
+}
