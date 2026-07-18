@@ -32,11 +32,14 @@ body {
     left: 20px;
     z-index: 10;
 }
-
 .logo-box img {
     width: 85px;
     height: auto;
-    filter: invert(41%) sepia(82%) saturate(2453%) hue-rotate(176deg) brightness(96%) contrast(101%);
+    /* الفلتر ده بيصفر الألوان ويخلي اللوجو أبيض منور وصريح 100% */
+    filter: brightness(0) invert(1);
+    background-color: transparent; /* تأكيد عشان لو في بقايا من الكود اللي فات */
+    -webkit-mask: none;
+    mask: none;
 }
 
 .profile-header {
