@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #008cd2; /* 👈 غيرنا أرضية الصفحة كلها للون اللبني عشان لو حصل أي تمدد ميبانش بياض مقرف */
+    background-color: #0f172a; /* أرضية الصفحة الخارجية مائلة لأسود كحلي فخم */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,14 +17,15 @@ body {
 .app-container {
     width: 100%;
     max-width: 450px;
-    min-height: 100vh; /* 👈 بيجبر الكارت ياخد طول شاشة الموبايل بالكامل من أولها لآخرها */
-    background: #ffffff;
+    min-height: 100vh; /* بيجبر الكارت ياخد طول شاشة الموبايل بالكامل */
+    background: #0f172a; /* توحيد الخلفية للـ Dark Navy */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 👈 بيوزع العناصر بالعدل عشان البيانات والزرار يقعدوا تحت برتياح */
+    justify-content: flex-start;
     position: relative;
 }
 
+/* اللوجو طاير فوق الصورة على الشمال */
 .logo-box {
     position: absolute;
     top: 20px;
@@ -32,7 +33,7 @@ body {
     z-index: 10;
 }
 
-/* 👈 تلوين اللوجو باللون اللبني/الأزرق الفاتح للشركة فوق الخلفية البيضاء */
+/* تلوين اللوجو باللون اللبني/الأزرق الفاتح الأصلي للشركة فوق حيطة الصورة */
 .logo-box img {
     width: 85px;
     height: auto;
@@ -42,7 +43,7 @@ body {
 .profile-header {
     width: 100%;
     position: relative;
-    background-color: #ffffff;
+    background-color: #ffffff; /* الحفاظ على خلفية الصورة الطبيعية */
 }
 
 .profile-header img {
@@ -51,21 +52,23 @@ body {
     display: block;
 }
 
+/* التلاشي السفلي للصورة يندمج بنعومة فائقة داخل الـ Dark Navy */
 .fade-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #008cd2 100%);
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0) 0%, #0f172a 100%);
 }
 
+/* قسم البيانات باللون الـ Dark Navy الفاخر */
 .info-section {
-    background-color: #008cd2;
-    padding: 35px 25px;
+    background-color: #0f172a;
+    padding: 30px 25px 45px 25px;
     text-align: center;
     color: #ffffff;
-    flex: 1; /* 👈 بيخلي القسم الأزرق يمد نفسه ويملأ أي فراغ باقي تحت الصورة تماماً */
+    flex: 1; /* يملأ أي فراغ باقي تحت الصورة بالكامل باللون الداكن */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,32 +79,36 @@ body {
     font-weight: 700;
     margin-bottom: 8px;
     text-transform: capitalize;
+    color: #ffffff;
 }
 
 .title {
-    font-size: 14px;
-    font-weight: 400;
-    color: #e0f2fe;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #008cd2; /* المسمى الوظيفي باللون اللبني المتناسق مع اللوجو */
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
+/* زر التواصل الرئيسي بلون اللبني الخاص بهوية الشركة */
 .cta-button {
     width: 100%;
-    background: #ffffff;
-    color: #008cd2;
+    background: #008cd2;
+    color: #ffffff;
     border: none;
-    padding: 15px;
+    padding: 16px;
     border-radius: 50px;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 14px rgba(0, 140, 210, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:active {
     transform: scale(0.98);
+    background: #0077b5;
 }
 
 /* تأثير الإخفاء والظهور المعتمد على الجافا سكريبت */
@@ -113,42 +120,41 @@ body {
     transition: all 0.4s ease-in-out;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .social-icons.show {
-    max-height: 50px;
+    max-height: 60px;
     opacity: 1;
     transform: translateY(0);
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .social-icons a {
-    color: #ffffff;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.social-icons a:hover {
-    opacity: 0.8;
-}
-.social-icons a i {
-    font-size: 24px; /* كبرنا حجم الرموز عشان تبان واضحة جداً */
-    color: #ffffff;
-}
-/* أيقونة حفظ جهة الاتصال المميزة */
-.save-vcard {
-    color: #ffffff;
-    font-size: 2.0rem; /* أكبر شوية من الـ 1.7rem بتاعة باقي الأيقونات */
-    text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-/* لون مميز عند الوقوف عليها (مثلاً لون سماوي هادئ) */
-.save-vcard:hover {
-    color: #008cd2; 
+.social-icons a i {
+    font-size: 26px; 
+    color: #ffffff; /* لون رمادي هادئ للأيقونات في الحالة العادية */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* تأثير تحويل الأيقونات للون الشركة اللبني عند التفاعل */
+.social-icons a:hover i {
+    color: #008cd2;
     transform: translateY(-3px);
+}
+
+/* تمييز أيقونة حفظ جهة الاتصال بلون أبيض دائم لتبرز وسط الكحلي */
+.save-vcard i {
+    color: #ffffff !important;
+    font-size: 28px; 
+}
+
+.save-vcard:hover i {
+    color: #008cd2 !important;
 }
