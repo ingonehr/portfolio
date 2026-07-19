@@ -25,22 +25,7 @@ body {
     position: relative;
 }
 
-/* اللوجو طاير */
-.logo-box {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-}
-.logo-box img {
-    width: 85px;
-    height: auto;
-    /* الفلتر ده بيصفر الألوان ويخلي اللوجو أبيض منور وصريح 100% */
-    filter: brightness(0) invert(1);
-    background-color: transparent; /* تأكيد عشان لو في بقايا من الكود اللي فات */
-    -webkit-mask: none;
-    mask: none;
-}
+
 
 .profile-header {
     width: 100%;
