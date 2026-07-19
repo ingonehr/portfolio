@@ -70,7 +70,7 @@ body {
 .title {
     font-size: 13px;
     font-weight: 700;
-    color: #6b9bd2; /* 👈 لون قميص Ingo الجديد */
+    color: #94a3b8; /* 👈 رصاصي فاتح هادئ متناسق مع القميص الجديد */
     letter-spacing: 1.5px;
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -78,21 +78,21 @@ body {
 /* زر التواصل الرئيسي */
 .cta-button {
     width: 100%;
-    background: #6b9bd2; /* 👈 نفس درجة القميص المظبوطة */
-    color: #ffffff;
+    background: #c1bcbc; /* 👈 زرار أبيض صريح عشان ينور تحت الكحلي */
+    color: #0f172a; /* الكتابة جواه بالكحلي الغامق للتباين */
     border: none;
     padding: 16px;
     border-radius: 50px;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(107, 155, 210, 0.25); /* خففنا الظل عشان يليق مع الدرجة الجديدة */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:active {
     transform: scale(0.98);
-    background: #5381b8; /* درجة أغمق سيكا وقت الضغط */
+    background: #cbd5e1; /* 👈 يقلب رصاصي عند الضغط */
 }
 /* تأثير الإخفاء والظهور للأيقونات */
 .social-icons {
@@ -127,12 +127,8 @@ body {
 }
 
 .social-icons a:hover i {
-    color: #6b9bd2; /* 👈 يقلب لون القميص عند الهوفر */
+    color: #008cd2; /* 👈 لمسة اللبني لشركة PKE تظهر هنا عند التفاعل فقط */
     transform: translateY(-3px);
-}
-
-.save-vcard:hover i {
-    color: #6b9bd2 !important; /* 👈 زرار الحفظ كمان يقلب نفس الدرجة */
 }
 
 .save-vcard:hover i {
