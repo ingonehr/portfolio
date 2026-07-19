@@ -70,16 +70,15 @@ body {
 .title {
     font-size: 13px;
     font-weight: 700;
-    color: #008cd2; 
+    color: #6b9bd2; /* 👈 لون قميص Ingo الجديد */
     letter-spacing: 1.5px;
-    margin-bottom: 25px; /* قللنا المسافة بين الوظيفة والزرار */
+    margin-bottom: 25px;
     text-transform: uppercase;
 }
-
 /* زر التواصل الرئيسي */
 .cta-button {
     width: 100%;
-    background: #008cd2;
+    background: #6b9bd2; /* 👈 نفس درجة القميص المظبوطة */
     color: #ffffff;
     border: none;
     padding: 16px;
@@ -87,15 +86,14 @@ body {
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(0, 140, 210, 0.3);
+    box-shadow: 0 4px 14px rgba(107, 155, 210, 0.25); /* خففنا الظل عشان يليق مع الدرجة الجديدة */
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:active {
     transform: scale(0.98);
-    background: #0077b5;
+    background: #5381b8; /* درجة أغمق سيكا وقت الضغط */
 }
-
 /* تأثير الإخفاء والظهور للأيقونات */
 .social-icons {
     max-height: 0;
@@ -129,13 +127,12 @@ body {
 }
 
 .social-icons a:hover i {
-    color: #008cd2;
+    color: #6b9bd2; /* 👈 يقلب لون القميص عند الهوفر */
     transform: translateY(-3px);
 }
 
-.save-vcard i {
-    color: #ffffff !important;
-    font-size: 28px; 
+.save-vcard:hover i {
+    color: #6b9bd2 !important; /* 👈 زرار الحفظ كمان يقلب نفس الدرجة */
 }
 
 .save-vcard:hover i {
